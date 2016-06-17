@@ -91,21 +91,18 @@
 
 
 <meta name="description" content="Ubuntu下的显卡切换起初可以由Nvidia+显卡驱动来完成，可是从Ubuntu 14.04版本开始，这种解决方案似乎已经失效。而另一种比较完美的解决方式—bumbleebee（俗称大黄蜂）逐渐得到了Ubuntu使用者的喜爱。
-对于12.04的用户，进行命令行操作：
-1234$ sudo add-apt-repository ppa:bumblebee/stable$ sudo apt-get">
+对于12.04的用户，进行命令行操作：      1234$ sudo add-apt-repository ppa:bumblebee/stable$ sudo apt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu之独、集显切换解决方案">
 <meta property="og:url" content="http://andrewliu.tk/2016/06/17/Ubuntu之独、显卡切换解决方案/index.html">
 <meta property="og:site_name" content="绛洞花主">
 <meta property="og:description" content="Ubuntu下的显卡切换起初可以由Nvidia+显卡驱动来完成，可是从Ubuntu 14.04版本开始，这种解决方案似乎已经失效。而另一种比较完美的解决方式—bumbleebee（俗称大黄蜂）逐渐得到了Ubuntu使用者的喜爱。
-对于12.04的用户，进行命令行操作：
-1234$ sudo add-apt-repository ppa:bumblebee/stable$ sudo apt-get">
-<meta property="og:updated_time" content="2016-06-17T12:47:49.986Z">
+对于12.04的用户，进行命令行操作：      1234$ sudo add-apt-repository ppa:bumblebee/stable$ sudo apt">
+<meta property="og:updated_time" content="2016-06-17T13:51:33.282Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu之独、集显切换解决方案">
 <meta name="twitter:description" content="Ubuntu下的显卡切换起初可以由Nvidia+显卡驱动来完成，可是从Ubuntu 14.04版本开始，这种解决方案似乎已经失效。而另一种比较完美的解决方式—bumbleebee（俗称大黄蜂）逐渐得到了Ubuntu使用者的喜爱。
-对于12.04的用户，进行命令行操作：
-1234$ sudo add-apt-repository ppa:bumblebee/stable$ sudo apt-get">
+对于12.04的用户，进行命令行操作：      1234$ sudo add-apt-repository ppa:bumblebee/stable$ sudo apt">
 
 
 
@@ -313,9 +310,8 @@
 
       
         <p>Ubuntu下的显卡切换起初可以由<code>Nvidia</code>+显卡驱动来完成，可是从Ubuntu 14.04版本开始，这种解决方案似乎已经失效。而另一种比较完美的解决方式—<a href="https://wiki.ubuntu.com/Bumblebee#Installation" target="_blank" rel="external">bumbleebee</a>（俗称大黄蜂）逐渐得到了Ubuntu使用者的喜爱。</p>
-<p>对于12.04的用户，进行命令行操作：</p>
-<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:bumblebee/stable</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install bumblebee bumblebee-nvidia virtualgl linux-headers-generic</span><br><span class="line">$ Reboot.</span><br></pre></td></tr></table></figure>
-</code></pre><a id="more"></a>
+<p>对于12.04的用户，进行命令行操作：<br>      <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository ppa:bumblebee/stable</span><br><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install bumblebee bumblebee-nvidia virtualgl linux-headers-generic</span><br><span class="line">$ Reboot.</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>对于14.04及以后的版本使用者：<br>      <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install bumblebee bumblebee-nvidia primus linux-headers-generic</span><br><span class="line">$ Reboot.</span><br></pre></td></tr></table></figure></p>
 <p>此时，如果您的笔记本有显卡指示灯的话(白色代表独显，蓝色代表集显），那么就会发生变化了。</p>
 <p><code>bumbleebee</code>的作用是关闭独显，好处是散热小，负担轻。如果您希望玩大型3D游戏或者其它对图形界面有极高要求的软件应用，可以通过命令行操作来使用独显运行。</p>
