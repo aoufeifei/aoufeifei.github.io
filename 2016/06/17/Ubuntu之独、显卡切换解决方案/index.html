@@ -429,47 +429,6 @@
 </div>
 
 
-<script type="text/javascript">
-  if (typeof DUOSHUO !== 'undefined')hookDUOSHUO_tp();
-  else $('[src="http://static.duoshuo.com/embed.js"]')[0].onload=hookDUOSHUO_tp;
-  function hookDUOSHUO_tp(){
-      var _D_post=DUOSHUO.templates.post
-      DUOSHUO.templates.post=function (e,t){
-          var rs=_D_post(e,t);
-          if(e.agent&&/^Mozilla/.test(e.agent))rs=rs.replace(/<\/div><p>/,show_ua(e.agent)+'</div><p>');
-          return rs;
-      }
-  }
-  function show_ua(string){
-      $.ua.set(string);
-      var sua=$.ua;
-      if(sua.os.version=='x86_64')sua.os.version='x64';
-      return '<span class="this_ua browser '+sua.browser.name+'">'+sua.browser.name+' | '+sua.browser.version+'</span>'+'<span class="this_ua platform '+sua.os.name+'">'+sua.os.name+' '+sua.os.version+'</span>';
-  }
-  </script>
-
-<script src="http://faisalman.github.io/ua-parser-js/src/ua-parser.js"></script>
-
-
-
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"<%= theme.duoshuo_shortname %>"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-    ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://faisalman.github.io/ua-parser-js/src/ua-parser.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script >
-
-
       
     </div>
   </div>
@@ -606,6 +565,15 @@
                 </a>
               </span>
             
+              <span class="links-of-author-item">
+                <a href="mailto:your email address" target="_blank" title="email">
+                  
+                    <i class="fa fa-fw fa-envelope"></i>
+                  
+                  email
+                </a>
+              </span>
+            
           
         </div>
 
@@ -686,11 +654,7 @@
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">本站访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
-  
 
-  
-    <span class="site-pv">本站总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
   
   
 </div>
