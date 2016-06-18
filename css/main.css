@@ -1548,7 +1548,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5d869c;
+  background: #dffcfa;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2272,7 +2272,7 @@ hr {
   }
 }
 .site-search form {
-  display: inline;
+  display: none;
 }
 #st-search-input {
   padding: 3px;
