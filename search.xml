@@ -4,6 +4,79 @@
   
     
     <entry>
+      <title><![CDATA[$\TeX$ 易混淆概念及关系]]></title>
+      <url>http://andrewliu.tk/2016/06/30/Tex%20%E6%98%93%E6%B7%B7%E6%B7%86%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%85%B3%E7%B3%BB/</url>
+      <content type="html"><![CDATA[<blockquote><p>$\TeX$家族可分为四个层次：引擎、格式、宏包、驱动。</p>
+<footer><strong>包太雷</strong><cite>LaTeX Notes 2.0</cite></footer></blockquote>
+<p>对于初学者而言，$\TeX$家族的各种特有名词比较难以理解，作者在这里尽力让大家能够直抵本质，明白它们的概念及关系。</p>
+<p>引擎和格式可以进行不同的组合，从而得到不同的输出。引擎的选择是通过编译方式来实现的。</p>
+<a id="more"></a>
+<h3 id="引擎"><a href="#引擎" class="headerlink" title="引擎"></a>引擎</h3><p>排版引擎是一种排版程序，其基本功能就是把字排成行，行排成页，涉及到断字、断行、分页等算法。</p>
+<ol>
+<li><p>$\TeX$ : 它是由Knuth发明的第一代排版引擎。它的最初目的是为了排版Knuth的巨著《计算机编程艺术》一书而被发明的。TeX本身也是一种宏语言，在这里是作为引擎来讲解的。</p>
+</li>
+<li><p>pdf$\TeX$ ： 一种新的排版引擎，可以直接将TeX文件编译成PDF文件，极大的推动了TeX的传播。</p>
+</li>
+<li><p>Xe$\TeX$ ： 一种可以直接调用系统字体并支持unicode的排版引擎。</p>
+</li>
+</ol>
+<h3 id="格式-format"><a href="#格式-format" class="headerlink" title="格式(format)"></a>格式(format)</h3><p>格式即宏命令的集合，它对$\TeX$进行了封装，使得$TeX$可以面向普通用户，降低它的使用门槛，通过宏操作来得到高质量的排版输出。</p>
+<ol>
+<li>Plain $\TeX$ ： 由Knuth发明，包含600多个宏命令，较为初级和繁琐，不够完善，但它是一个划时代的发明。</li>
+<li>$\LaTeX$ ： $\TeX$的一种宏集，是一种优于Plain $\TeX$的格式，结构更为逻辑化，宏命令更加直接有效。</li>
+</ol>
+<h3 id="编译方式（命令）"><a href="#编译方式（命令）" class="headerlink" title="编译方式（命令）"></a>编译方式（命令）</h3><p>tex命令默认用Plain $\TeX$格式进行排版。也就是说tex命令后面默认跟的tex文件应该是用Plain Tex格式写的。</p>
+<p>tex命令加上某一个选项使用，就会用LaTeX格式进行排版，也就是说此时后面跟的tex文件应该是用LaTex格式写的。</p>
+<ol>
+<li><p>pdfLaTeX : pdf$\TeX$引擎中的命令，用来编译用$\LaTeX$格式写的tex文件。</p>
+</li>
+<li><p>xeLaTeX ： Xe$\TeX$引擎中的命令，用来编译用$\LaTeX$格式写的tex文件。与上者地位和作用相似。</p>
+</li>
+</ol>
+<p>源文件是 Plain $\TeX$ 格式时，可以分别用tex、 pdftex、 xetex 程序调用$\TeX$,pdf$\TeX$,Xe$\TeX$引擎；<br>源文件是$\LaTeX$格式时，相应的程序则是LaTeX,pdfLaTeX,xeLaTeX。</p>
+<p>目前最为流行和推荐的是：$\LaTeX$格式 + Xe$\TeX$引擎。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Atom+TexLive解决方案]]></title>
+      <url>http://andrewliu.tk/2016/06/20/Atom+TexLive%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+      <content type="html"><![CDATA[<p>Atom on Linux</p>
+<p>To install Atom on Linux, you can download a Debian package or RPM package either from the main Atom website at atom.io or from the Atom project releases page at <a href="https://github.com/atom/atom/releases" target="_blank" rel="external">https://github.com/atom/atom/releases</a>.</p>
+<p>On Debian, you would install the Debian package with dpkg -i:</p>
+<p>$ sudo dpkg -i atom-amd64.deb</p>
+<h2 id="基本术语"><a href="#基本术语" class="headerlink" title="基本术语"></a>基本术语</h2><h3 id="Buffer"><a href="#Buffer" class="headerlink" title="Buffer"></a>Buffer</h3><p>Buffer是Atom里文件的文本内容。它基本上是一个描述性文档，但它只存在于Atmo的非当前区中。举个例子，你可以改变buffer的文本内容，但在你保存之前，并不会写入与它有关的文件中。</p>
+<h3 id="Pane"><a href="#Pane" class="headerlink" title="Pane"></a>Pane</h3><p>Pane是Atom的可视化界面。如果你注意观察欢迎界面，就会看到四个Pane—标签条，底部的状态条和文本编辑器。</p>
+<h3 id="Command-Palette"><a href="#Command-Palette" class="headerlink" title="Command Palette"></a>Command Palette</h3><p>在欢迎界面中，我们要了解最重要的命令面板中最重要的命令—<code>ctrl+shift+p</code>，它的作用是弹出命令面板。您可以在该面板中搜索任何你想要知道的信息。</p>
+<p>它提供了模糊搜索功能。</p>
+<h3 id="设置和偏好界面"><a href="#设置和偏好界面" class="headerlink" title="设置和偏好界面"></a>设置和偏好界面</h3><p>在界面里，你可以改变颜色方案或主题，和指定字体，面板尺寸，滚动速度等。你也可以通过这个界面来安装新包和主题（主题都在Atom的包里）。</p>
+<a id="more"></a>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Ubuntu下安装TexLive2016并配置Atom]]></title>
+      <url>http://andrewliu.tk/2016/06/20/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85TexLive2016%E5%B9%B6%E9%85%8D%E7%BD%AEAtom/</url>
+      <content type="html"><![CDATA[<p>TEX Live是TEX及其相关程序在GNU/Linux及其他类Unix系统、MacOSX和Windows系统下的一套发行版。它包括了EX, LATEX2ε, ConTEXt,METAFONT, MetaPost, BibTE等许多可执行程序；种类繁多的宏包、字体和文档，并支持世界上许多不同的语言。<br><a id="more"></a></p>
+<p>你可以使用DVD方式或者网络方式来安装TEX Live (<a href="http://tug.org/texlive/acquire.html)。通过网络的安装程序本身非常小，它可以从网上下载所有的你所要求的软件包。网络安装程序对仅使用TEX" target="_blank" rel="external">http://tug.org/texlive/acquire.html)。通过网络的安装程序本身非常小，它可以从网上下载所有的你所要求的软件包。网络安装程序对仅使用TEX</a> Live一小部分的用户来说非常适宜。</p>
+<p>TexLive所提供的安装脚本为<code>install-tl</code>，可以在安装了<code>Perl</code>并解压TexLive2016.tar.gz之后，直接以管理权限运行该文件即可安装。</p>
+<p>在此附上<a href="http://tug.org/texlive/doc/texlive-zh-cn/texlive-zh-cn.pdf" target="_blank" rel="external">TexLive文档</a>。</p>
+<h2 id="Atom中LaTeX-Package的用法"><a href="#Atom中LaTeX-Package的用法" class="headerlink" title="Atom中LaTeX Package的用法"></a>Atom中LaTeX Package的用法</h2><blockquote>
+<p>LaTeX Package: compile LaTeX documents from within Atom.</p>
+</blockquote>
+<h3 id="Tex-Path"><a href="#Tex-Path" class="headerlink" title="Tex Path"></a>Tex Path</h3><p>Atom必须与TexLive等发行版进行连接，才能运行。</p>
+<h3 id="编译方式"><a href="#编译方式" class="headerlink" title="编译方式"></a>编译方式</h3><p>LaTeX Package 提供了三种编译方式：<code>pdflatex</code>,<code>lualatex</code>,<code>xelatex</code>。</p>
+<p>###</p>
+<p>快捷键：</p>
+<ul>
+<li><code>ctrl+alt+b</code> build</li>
+<li><code>ctrl+alt+s</code> sybc</li>
+<li><code>ctrl+alt+c</code> clean</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo系列之Swifype搜索]]></title>
       <url>http://andrewliu.tk/2016/06/18/Hexo%E7%B3%BB%E5%88%97%E4%B9%8BSwifype%E6%90%9C%E7%B4%A2/</url>
       <content type="html"><![CDATA[<p>Swiftype 可以为网站及移动 app 提供内置搜索引掣服务。其部署十分简单，只须输入 URL 地址平台即可执行对用户网站的抓取，插入 JavaScript 代码嵌入网站就即完成搜索引擎的创建。Swiftype 还提供了分析服务，供网站检索分析用户的搜索行为和使用偏好。Swiftype 还支持对搜索结果排序进行定制。</p>
